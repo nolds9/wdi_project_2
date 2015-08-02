@@ -12,14 +12,14 @@
     <li><a href="#!">My Profiles </a></li>
     <li><a href="#!">MY Courses</a></li>
     <li class="divider"></li>
-    <li><a href="#!">Log Out</a></li>
+    <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
   </ul>
 
   <ul id="dropdown2" class="dropdown-content">
     <li><a href="#!">My Profiles </a></li>
     <li><a href="#!">MY Courses</a></li>
     <li class="divider"></li>
-    <li><a href="#!">Log Out</a></li>
+    <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
   </ul>
 
  <header>
@@ -31,15 +31,21 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="sass.html">Courses</a></li>
-          <li><a href="badges.html">Sign Up</a></li>
-          <li><a href="collapsible.html">Login</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+          <% if (!user_signed_in?) %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+          <% else %>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+          <% end %>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="sass.html">Courses</a></li>
-          <li><a href="badges.html">Sign Up</a></li>
-          <li><a href="collapsible.html">Login</a></li>
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+          <% if (!user_signed_in?) %>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Login", new_user_session_path %></li>
+          <% else %>
+            <li><a class="dropdown-button" href="#!"d data-activates="dropdown2">User<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+          <% end %>
         </ul>
       </div>
     </div>
