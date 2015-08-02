@@ -16,3 +16,16 @@
  @import "materialize/components/color";
  $primary-color: color("black", "lighten-2") !default;
  @import 'materialize';
+
+.logo {
+  width: 30x30;
+}
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
