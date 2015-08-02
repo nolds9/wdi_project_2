@@ -46,3 +46,4 @@ end
 gem 'devise'
 gem 'materialize-sass'
 gem 'rails_12factor', group: :production
+gem 'toastr-rails'

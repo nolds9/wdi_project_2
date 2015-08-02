@@ -16,6 +16,7 @@
  @import "materialize/components/color";
  $primary-color: color("black", "lighten-2") !default;
  @import 'materialize';
+ @import 'toastr';
 
 .logo {
   width: 30x30;
