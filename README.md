@@ -1,10 +1,14 @@
 # AssemblyGeneral
 
-An online educational platform where users can take courses by completing and learning from informative lessons.
+An educational platform where users can take courses by completing and learning from informative lessons.
+
+## Specs
+
+User Authentication and Authorization system using the gem Devise
 
 ## User Stories
 
-* Epic: As a user, I want an online education platform so that I can I can take classes and learn by completing lessons on the topic of my choosing.
+* Epic: As a user, I want an education platform so that I can I can take classes and learn by completing lessons on the topic of my choosing.
 
 * As a user, I want a welcome page that displays the purpose of the app and prompts for a sign up or log in if applicable.
 
