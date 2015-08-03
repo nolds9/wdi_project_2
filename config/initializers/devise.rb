@@ -272,6 +272,9 @@ Devise.setup do |config|
   require 'omniauth-github'
   config.omniauth :github, ENV['GITHUB_API_KEY'], ENV['GITHUB_API_SECRET'], scope: "user:email"
 
+  require 'omniauth-linkedin'
+  config.omniauth :linkedin, ENV['LINKEDIN_API_KEY'], ENV['LINKEDIN_API_SECRET']
+
 
   # require 'omniauth-facebook'
   # config.omniauth :facebook, ENV['FACEBOOK_API_KEY'], ENV['FACEBOOK_API_SECRET']
