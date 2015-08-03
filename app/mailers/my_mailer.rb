@@ -10,13 +10,14 @@ class MyMailer < ActionMailer::Base
 		message = {
 			to: [{email: "#{user.email}"}],
 			subject: "Welcome to AssemblyGeneral",
-			"merg_vars": [
+			merg_vars: [
 				{
 					rcpt: user.email,
-					vars: [{"name": "USER_NAME", "content": "Test"}]
+					vars: [{name: "USER_NAME", content: user.name}]
 				}
 			]
 		}
 		mandrill_client.messages.send_template template_name, template_content, message
+
 	end
 end
