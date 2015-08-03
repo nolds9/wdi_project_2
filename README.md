@@ -3,8 +3,10 @@
 An educational platform where users can take courses by completing and learning from informative lessons.
 
 ## Specs
-
-User Authentication and Authorization system using the gem Devise
+* Layout structure and styling with Materialize
+* User Authentication and Authorization system using the gem Devise
+* Custom Flash Notifications with the gem Toastr
+* User avatar using Gravatar api
 
 ## User Stories
 
