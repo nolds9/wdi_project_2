@@ -7,6 +7,8 @@ An educational platform where users can take courses by completing and learning 
 * User Authentication and Authorization system using the gem Devise
 * Custom Flash Notifications with the gem Toastr
 * User avatar using Gravatar api
+* Transactional Emails with Mandrill API
+* Oauth login using Google
 
 ## User Stories
 
