@@ -44,13 +44,20 @@ group :development, :test do
 end
 
 gem 'devise'
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'active_skin'
+
 gem 'materialize-sass'
 gem 'rails_12factor', group: :production
 gem 'toastr-rails'
 gem 'mandrill-api', '1.0.52', require: 'mandrill'
 gem 'figaro'
+
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-linkedin'
+
+
 # gem 'omniauth-facebook'
