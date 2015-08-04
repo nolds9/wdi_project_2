@@ -59,5 +59,5 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'omniauth-linkedin'
 
-
+gem "paperclip", "~> 4.3"
 # gem 'omniauth-facebook'
