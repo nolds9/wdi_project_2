@@ -1,21 +1,23 @@
 
-<h1 id="banner" class="red center ">Welcome to AssemblyGeneral</h1>
+<h1  class="banner center ">Welcome</h1>
+<div class="row">
 
-<% @courses.each do |course| %>
-	<%= link_to course do %>
-		<div class="col s12 m6 l4">
-			<div class="card">
-				<div class="card-image ">
-					<%=  image_tag course.image %>
-				</div>
-				<div class="card-content" style="height: 6em">
-					<span class= "card-title grey-text text-darken-4">
-							<%= course.name %>
-					</span>
-				</div>
 
+	<% @courses.each do |course| %>
+		<%= link_to course do %>
+			<div class="col s12 m6 l4">
+				<div class="card">
+					<div class="card-image">
+						<%=  image_tag course.image, class: "course-image" %>
+					</div>
+					<div class="card-content" style="height: 6em">
+						<span class= "card-title grey-text text-darken-4">
+								<%= course.name %>
+						</span>
+					</div>
+
+				</div>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
-<% end %>
 </div>
