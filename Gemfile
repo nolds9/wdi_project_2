@@ -47,6 +47,8 @@ gem 'devise'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
+gem "active_admin-sortable_tree"
+
 
 gem 'materialize-sass'
 gem 'rails_12factor', group: :production

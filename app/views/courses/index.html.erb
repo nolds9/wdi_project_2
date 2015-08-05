@@ -1,8 +1,7 @@
 
-<h1  class="banner center ">Welcome</h1>
+<h1  class="banner center ">Available Courses</h1>
 <div class="row">
-
-
+<br>
 	<% @courses.each do |course| %>
 		<%= link_to course do %>
 			<div class="col s12 m6 l4">
@@ -15,7 +14,6 @@
 								<%= course.name %>
 						</span>
 					</div>
-
 				</div>
 			</div>
 		<% end %>

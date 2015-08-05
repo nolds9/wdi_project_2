@@ -1,4 +1,4 @@
-# AssemblyGeneral
+# Assembly General
 
 An educational platform where users can take courses by completing and learning from informative lessons.
 
@@ -11,6 +11,8 @@ An educational platform where users can take courses by completing and learning 
 * Oauth login using Google, Github, and LinkedIn
 * Admin User generated content with ActiveAdmin gem
 * Image Upload with Paperclip gem
+
+### Feature Wish list / Known problems
 * Markdown formatting in HTML with Redcarpet and Coderay gems
 
 
