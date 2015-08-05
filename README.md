@@ -15,8 +15,9 @@ An educational platform where users can take courses by completing and learning 
 
 ### Feature Wish list / Known problems
 * Markdown formatting in HTML with Redcarpet and Coderay gems
-
-
+* Add playback speed buttons to control video speed.
+* Add Next and Previous buttons to easily navigate between lessons.
+* Fix mobile viewport errors.
 
 ## User Stories
 
