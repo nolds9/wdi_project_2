@@ -1,19 +1,21 @@
 <div class="row">
-
+  <br>
   <div class="col m4">
     <div class="card z-depth-2">
       <div class="card-content">
-        <% @lessons.each do |lesson| %>
-          <% if lesson.header %>
-            <div class="collection-item active ">
-              <i class="mdi-social-school"> <%= lesson.title %></i>
-            </div>
-          <% else %>
-            <%= link_to [lesson.course, lesson], class: "collection-item" do %>
-              <%= lesson.title %>
+        <div class="collection">
+          <% @lessons.each do |lesson| %>
+            <% if lesson.header %>
+              <div class="collection-item active red darken-2">
+                <i class="mdi-social-school"> <%= lesson.title %></i>
+              </div>
+            <% else %>
+              <%= link_to [lesson.course, lesson], class: "collection-item grey-text text-darken-4" do %>
+                <%= lesson.title %>
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>

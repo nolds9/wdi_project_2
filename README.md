@@ -2,13 +2,18 @@
 
 An educational platform where users can take courses by completing and learning from informative lessons.
 
-## Specs
+## Specs and Technologies
 * Layout structure and styling with Materialize
 * User Authentication and Authorization system using the gem Devise
 * Custom Flash Notifications with the gem Toastr
 * User avatar using Gravatar api
 * Transactional Emails with Mandrill API
-* Oauth login using Google
+* Oauth login using Google, Github, and LinkedIn
+* Admin User generated content with ActiveAdmin gem
+* Image Upload with Paperclip gem
+* Markdown formatting in HTML with Redcarpet and Coderay gems
+
+
 
 ## User Stories
 
