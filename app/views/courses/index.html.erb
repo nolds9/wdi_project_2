@@ -1,0 +1,12 @@
+<h1>Courses List</h1>
+
+
+
+  <%= @courses.each do |course| %>
+    <li>
+      <%= link_to course do %>
+        <%= course.image(:thumb) %>
+        <%= course.name %>
+      <% end %>
+    </li>
+  <% end %>

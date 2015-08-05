@@ -1,0 +1,17 @@
+<h1><%= @course.name %></h1>
+
+
+<p><%= image_tag @course.image(:medium) %></p>
+
+<p><%= @course.content %></p>
+
+
+<ul>
+  <%= @lessons.each do |lesson| %>
+    <li>
+      <%= link_to [lesson.course, lesson] do %>
+        <%= lesson.note %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
