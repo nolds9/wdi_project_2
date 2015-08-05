@@ -1,3 +1,33 @@
-<h1><%= @lesson.title %></h1>
+<div class="row">
 
-<%= @lesson.note %>
+  <div class="col m4">
+    <div class="card z-depth-2">
+      <div class="card-content">
+        <% @lessons.each do |lesson| %>
+          <% if lesson.header %>
+            <div class="collection-item active ">
+              <i class="mdi-social-school"> <%= lesson.title %></i>
+            </div>
+          <% else %>
+            <%= link_to [lesson.course, lesson], class: "collection-item" do %>
+              <%= lesson.title %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col m8">
+    <div class="card z-depth-2">
+      <div class="card-content">
+        <%= @lesson.video %>
+      </div>
+      <div class="card-action grey-text text-darken 4">
+        <h5><%= @lesson.title %></h5>
+        <hr>
+        <%= @lesson.note %>
+      </div>
+    </div>
+  </div>
+</div>
