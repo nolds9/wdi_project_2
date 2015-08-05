@@ -21,7 +21,7 @@
         <hr>
         <%= @course.content %>
 
-        <div class="collection">
+        <div class="collection" data-no-turbolink>
           <% @lessons.each do |lesson| %>
             <% if lesson.header %>
               <div class="collection-item active red darken-2">

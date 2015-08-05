@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" data-no-turbolink>
   <br>
   <div class="col m4">
     <div class="card z-depth-2">
@@ -22,9 +22,7 @@
 
   <div class="col m8">
     <div class="card z-depth-2">
-      <div class="card-content">
-        <%= @lesson.video %>
-      </div>
+      <div id="wistia_<%= @lesson.video %>"></div>
       <div class="card-action grey-text text-darken 4">
         <h5><%= @lesson.title %></h5>
         <hr>
@@ -33,3 +31,12 @@
     </div>
   </div>
 </div>
+
+<script src="http://fast.wistia.net/static/E-v1.js"></script>
+<script>
+  wistiaEmbed = Wistia.embed("<%= @lesson.video %>", {
+    videoQuality: "hd-only",
+    videoFoam: true
+  });
+
+</script>
