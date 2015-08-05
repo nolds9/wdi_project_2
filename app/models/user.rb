@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
 
+ has_many :registrations
+ has_many :courses, through: :registrations
+
   validates :name, presence: true, length: { maximum: 25 }
 
   after_create :send_notification

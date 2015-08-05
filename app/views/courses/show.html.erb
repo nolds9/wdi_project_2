@@ -2,12 +2,36 @@
   <br>
   <div class="col m4">
     <div class="card z-depth-2">
-      <div class="center">
-        <h1>Free</h1>
-      </div>
-      <div class="card-action center">
-        <button class="btn waves-effect waves-light red darken-2">Register for Course</button>
-      </div>
+      <% if !@registered %>
+        <div class="center">
+          <h1>Free</h1>
+        </div>
+        <div class="card-action center">
+          <% if user_signed_in? %>
+            <%= form_tag register_path do %>
+              <%= hidden_field_tag 'course_id', @course.id %>
+              <button type= "submit" class="btn waves-effect waves-light red darken-2">Register for Course</button>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path do %>
+              <button class="btn waves-effect waves-light red darken-2">Register for Course</button>
+            <% end %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="center">
+          <%= image_tag avatar_url(current_user), class: "circle responsive-img" %><br/>
+          <h5><%= current_user.name %></h5>
+        </div>
+        <div class="card-action center">
+          <% @users.each do |user| %>
+            <span class="valign-wrapper">
+              <%= image_tag avatar_url(current_user), class: "circle responsive-img" %>&nbsp;
+              <%= user.name %>
+            </span>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 

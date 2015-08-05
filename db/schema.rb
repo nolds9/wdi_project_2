@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804220615) do
+ActiveRecord::Schema.define(version: 20150805205548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,17 @@ ActiveRecord::Schema.define(version: 20150804220615) do
 
   add_index "lessons", ["course_id"], name: "index_lessons_on_course_id", using: :btree
 
+  create_table "registrations", force: :cascade do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "registrations", ["course_id", "user_id"], name: "index_registrations_on_course_id_and_user_id", unique: true, using: :btree
+  add_index "registrations", ["course_id"], name: "index_registrations_on_course_id", using: :btree
+  add_index "registrations", ["user_id"], name: "index_registrations_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -96,4 +107,6 @@ ActiveRecord::Schema.define(version: 20150804220615) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "lessons", "courses"
+  add_foreign_key "registrations", "courses"
+  add_foreign_key "registrations", "users"
 end

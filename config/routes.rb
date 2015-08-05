@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   get 'pages/about', to: "pages#about"
-
+  post '/register' => 'registrations#register'
   root "courses#index"
 
   resources :courses do
