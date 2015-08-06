@@ -11,7 +11,7 @@ class LessonsController < ApplicationController
     end
 
     if registered
-    @lesson = @lessons.find(params[:ids])
+    @lesson = @lessons.find(params[:id])
     else
       flash[:notice] = "You must register first!"
       redirect_to course

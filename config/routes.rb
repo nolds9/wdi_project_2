@@ -7,10 +7,12 @@ Rails.application.routes.draw do
              controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
 
-  get 'pages/about', to: "pages#about"
-  post '/register' => 'registrations#register'
-  
-# home
+  get 'pages/about', to: 'pages#about'
+  get '/mycourses' => 'courses#list'
+  post '/register',  to: 'registrations#register'
+
+
+  # home
   root "courses#index"
 
   resources :courses do

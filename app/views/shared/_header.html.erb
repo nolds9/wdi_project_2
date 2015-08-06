@@ -1,13 +1,13 @@
 <ul id="dropdown1" class="dropdown-content">
   <li><%= link_to "My Profile", edit_user_registration_path %></li>
-  <li><%= link_to "My Courses", courses_path %></li>
+  <li><%= link_to "My Courses", mycourses_path %></li>
   <li class="divider"></li>
   <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
 </ul>
 
 <ul id="dropdown2" class="dropdown-content">
   <li><%= link_to "My Profile", edit_user_registration_path %></li>
-  <li><%= link_to "My Courses", courses_path %></li>
+  <li><%= link_to "My Courses", mycourses_path %></li>
   <li class="divider"></li>
   <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
 </ul>
@@ -26,7 +26,7 @@
           <li><%= link_to "Login", new_user_session_path %></li>
         <% else %>
           <li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown1">
-            <%= image_tag avatar_url(current_user), class: "circle responsive-img image-size" %>&nbsp;
+            <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
             <%= current_user.name %><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
         <% end %>
       </ul>
@@ -37,7 +37,7 @@
           <li><%= link_to "Login", new_user_session_path %></li>
         <% else %>
           <li><a class="dropdown-button valign-wrapper" href="#!"d data-activates="dropdown2">
-            <%= image_tag avatar_url(current_user), class: "circle responsive-img image-size" %>&nbsp;
+            <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
             <%= current_user.name %><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
         <% end %>
       </ul>

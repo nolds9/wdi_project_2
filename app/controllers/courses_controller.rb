@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-
+  before_action :authenticate_user!, only: [:list]
   def index
     @courses = Course.all
   end
@@ -17,6 +17,10 @@ class CoursesController < ApplicationController
 
   end
 
-  private
+  def list
+    if !current_user.nil?
+        @courses = current_user.courses
+    end
+  end
 
 end

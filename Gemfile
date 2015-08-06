@@ -64,3 +64,6 @@ gem 'omniauth-linkedin'
 
 
 gem "paperclip", "~> 4.3"
+
+gem "awesome_print", require:"ap"
+gem "pry"
