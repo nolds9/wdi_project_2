@@ -7,16 +7,16 @@
   // font-style: italic;
  }
 
+
+
 #courses-nav {
   font-size: 4rem;
 }
 .nav-links > a {
   font-size: 20px;
-  font-weight: bold;
+
 }
-.nav-links > a:hover {
-  color: red;
-}
+
 
  body {
     display: flex;
@@ -36,8 +36,8 @@
     color: white;
   }
   .course-image {
-    width: 175px;
-    height: 100px;
+    width: 200px;
+    height: 175px;
   }
  .container {
    width: 95%;
