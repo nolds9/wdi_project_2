@@ -12,14 +12,20 @@ An educational platform where users can take courses by completing and learning 
 * Admin User generated content with ActiveAdmin gem
 * Image Upload with Paperclip gem
 * Video player with Wisita API
+* Comments and discussion with Disqus
+
 
 ### Feature Wish list / Known problems
 * Markdown formatting in HTML with Redcarpet and Coderay gems
 * Add playback speed buttons to control video speed.
 * Add Next and Previous buttons to easily navigate between lessons.
 * Integrate checkout and payment with Stripe api
-* Create Reviews and Comments feature 
+* Add Reviews feature
 * Fix mobile viewport errors.
+
+#### Found issues and work-arounds
+* Conflicts between javascript libraries and gems css with materialize default. Solution: Remove Application.scss's compiling and changed order of required js files
+* 
 
 ## User Stories
 
