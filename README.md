@@ -17,6 +17,8 @@ An educational platform where users can take courses by completing and learning 
 * Markdown formatting in HTML with Redcarpet and Coderay gems
 * Add playback speed buttons to control video speed.
 * Add Next and Previous buttons to easily navigate between lessons.
+* Integrate checkout and payment with Stripe api
+* Create Reviews and Comments feature 
 * Fix mobile viewport errors.
 
 ## User Stories
