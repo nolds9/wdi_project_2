@@ -24,10 +24,11 @@
           <h5><%= current_user.name %></h5>
         </div>
         <div class="card-action center">
+          <p>Registered Students</p>
           <% @users.each do |user| %>
             <span class="valign-wrapper">
               <%= image_tag avatar_url(user), class: "circle responsive-img avatar-small" %>&nbsp;
-              <%= user.name %>
+              <%= user.name.truncate_words(1).gsub("..."," ") %>
             </span><br>
           <% end %>
         </div>
@@ -67,7 +68,7 @@
                 </div>
               <% else %>
                 <%= link_to [lesson.course, lesson], class: "collection-item" do %>
-                  <%= lesson.note %>
+                  <%= lesson.title %>
                   <% end %>
               <% end %>
             <% end %>
