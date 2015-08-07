@@ -24,8 +24,8 @@ An educational platform where users can take courses by completing and learning 
 * Fix mobile viewport errors.
 
 #### Found issues and work-arounds
-* Conflicts between javascript libraries and gems css with materialize default. Solution: Remove Application.scss's compiling and changed order of required js files
-* 
+* Conflicts between javascript libraries and gem's css with materialize default. Solution: Remove Application.scss's compiling and changed order of required js files
+* Wisita player would not load on initial page load, fixed by disabling turbolinks for relevant data.
 
 ## User Stories
 
