@@ -45,6 +45,9 @@ end
 
 gem 'devise'
 
+gem 'rails-erd'
+
+
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
 gem "active_admin-sortable_tree"
