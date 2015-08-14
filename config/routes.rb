@@ -6,9 +6,13 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile'},
              controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-
+  # mms: since I'm discussing (pushing for) RESTful routes everywhere else, it's important to note that this is a known, acceptable exception.
+  # mms:   Why?  The "RESTful" solution would be "about#show", "contact#show", etc.  A relatively empty controller for each page, which is unlikely to ever use the other actions.
+  # mms:   "About" is not a "resource".
   get 'pages/about', to: 'pages#about'
+  # mms: recommend a delimiter '/my_courses', though I'm unclear why this is any better than '/courses'
   get '/mycourses' => 'courses#list'
+  # mms: why is this better than 'registrations#create'?  Stick to RESTful routes whenever possible.
   post '/register',  to: 'registrations#register'
 
 
